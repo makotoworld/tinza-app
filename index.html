@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinza - シンプルで楽しいパズルゲーム</title>
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4299e1;
+            --background-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .screenshot-gallery {
+            margin-top: 50px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f6f6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-card img {
+            width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .modes {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .modes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mode-card {
+            background: var(--background-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">Tinza</a>
+            <div class="nav-links">
+                <a href="#features">特徴</a>
+                <a href="#modes">ゲームモード</a>
+                <a href="privacy.html">プライバシーポリシー</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Tinza</h1>
+        <p>横一列に揃えて消すシンプルパズル！<br>60秒で遊べるカジュアルゲーム</p>
+        <a href="#" class="cta-button">App Storeでダウンロード</a>
+        
+        <div class="screenshot-gallery">
+            <div class="screenshot-container">
+                <img src="images/screenshots/gameplay-1.webp" width="300" alt="ゲームプレイ画面" class="screenshot"
+                     loading="lazy" />
+                <img src="images/screenshots/gameplay-2.webp" width="300" alt="エンドレスモード画面" class="screenshot"
+                     loading="lazy" />
+                <img src="images/screenshots/gameplay-6.webp" width="300" alt="スコア画面" class="screenshot"
+                     loading="lazy" />
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <img src="images/screenshots/gameplay-3.webp" alt="Simple gameplay">
+            <h3>シンプルな操作</h3>
+            <p>横一列に3つ以上揃えるだけの簡単操作！誰でも楽しめるカジュアルゲーム</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/screenshots/gameplay-5.webp" alt="Time limit">
+            <h3>60秒の時間制限</h3>
+            <p>短時間で楽しめる手軽なゲームプレイ。通勤や休憩時間にぴったり</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/screenshots/gameplay-4.webp" alt="Visual effects">
+            <h3>美しいエフェクト</h3>
+            <p>爽快な視覚効果と気持ちの良い触覚フィードバック</p>
+        </div>
+    </section>
+
+    <section id="modes" class="modes">
+        <div class="modes-container">
+            <div class="mode-card">
+                <h3>通常モード</h3>
+                <p>クラシックな60秒のタイムアタック。基本ルールで楽しめるモード。</p>
+            </div>
+            <div class="mode-card">
+                <h3>エンドレスモード</h3>
+                <p>4つ以上揃えると制限時間が延長！どこまでプレイできるかに挑戦しよう。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>プレミアム機能(準備中)</h3>
+            <p>・いつでも一時停止可能<br>・広告非表示<br>・特殊ブロックによるゲームプレイ</p>
+            <!--a href="" class="cta-button">準備中</a-->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Tinza. All rights reserved.</p>
+        <div>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="#">お問い合わせ</a>
+        </div>
+    </footer>
+</body>
+</html>
